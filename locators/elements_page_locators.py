@@ -16,9 +16,15 @@ class TextBoxPageLocators:
 
 
 class CheckBoxPageLocators:
-            EXPAND_ALL_BUTTON = (By.CSS_SELECTOR, "button[title='Expand all']")
-            COLLAPSE_ALL_BUTTON = (By.CSS_SELECTOR, "button[title='Collapse all']")
-            ITEM_LIST = (By.CSS_SELECTOR, "span[class='rct-title']")
-            CHECKED_ITEMS = (By.CSS_SELECTOR, "svg[class='rct-icon rct-icon-check']")
-            TITLE_ITEM = (By.XPATH, ".//ancestor::span[@class='rct-text']")
-            OUTPUT_RESULT = (By.CSS_SELECTOR, "span[class='text-success']")
+    EXPAND_ALL_BUTTON = (By.CSS_SELECTOR, "button[title='Expand all']")
+    COLLAPSE_ALL_BUTTON = (By.CSS_SELECTOR, "button[title='Collapse all']")
+    ITEM_LIST = (By.CSS_SELECTOR, "span[class='rct-title']")
+    CHECKED_ITEMS = (By.CSS_SELECTOR, "svg[class='rct-icon rct-icon-check']")
+    TITLE_ITEM = (By.XPATH, ".//ancestor::span[@class='rct-text']")
+    OUTPUT_RESULT = (By.CSS_SELECTOR, "span[class='text-success']")
+
+class RadioButtonPageLocators:
+        YES_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='yesRadio']")
+        IMPRESSIVE_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='noRadio']")
+        NO_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='impressiveRadio']")
+        OUTPUT_RESULT = (By.CSS_SELECTOR, "p span[class='text-success']")

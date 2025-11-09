@@ -1,6 +1,7 @@
 import time
 
-from pages.elements_page import TextBoxPage, CheckBoxPage
+from pages.elements_page import TextBoxPage, CheckBoxPage, RadioButtonPage
+
 
 class TestElements:
     class TestTextBox:
@@ -11,7 +12,6 @@ class TestElements:
             input_data = text_box_page.fill_all_fields()
             output_data = text_box_page.verify_filled_fields()
             assert input_data == output_data, 'data are not equal'
-
 
     class TestCheckBox:
         def test_check_box(self, driver):
@@ -24,6 +24,23 @@ class TestElements:
             print(input_checkbox)
             print(output_checkbox)
             assert input_checkbox == output_checkbox, 'check boxes have not been checked'
+
+class TestRadioButton:
+    def test_radio_button(self, driver):
+        radio_button_page = RadioButtonPage(driver, 'https://demoqa.com/radio-button')
+        radio_button_page.open()
+        radio_button_page.click_radio_button('yes')
+        output_yes = radio_button_page.get_output_result()
+        radio_button_page.click_radio_button('no')
+        output_no = radio_button_page.get_output_result()
+        radio_button_page.click_radio_button('impressive')
+        output_impressive = radio_button_page.get_output_result()
+        assert output_yes == 'Yes', 'data are not equal'
+        assert output_no == 'No', 'data are not equal'
+        assert output_impressive == 'Impressive', 'data are not equal'
+
+
+
 
 
 
