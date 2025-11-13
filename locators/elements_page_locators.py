@@ -24,7 +24,27 @@ class CheckBoxPageLocators:
     OUTPUT_RESULT = (By.CSS_SELECTOR, "span[class='text-success']")
 
 class RadioButtonPageLocators:
-        YES_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='yesRadio']")
-        IMPRESSIVE_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='noRadio']")
-        NO_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='impressiveRadio']")
-        OUTPUT_RESULT = (By.CSS_SELECTOR, "p span[class='text-success']")
+    YES_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='yesRadio']")
+    IMPRESSIVE_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='noRadio']")
+    NO_BUTTON = (By.CSS_SELECTOR, "label[class^='custom-control'][for='impressiveRadio']")
+    OUTPUT_RESULT = (By.CSS_SELECTOR, "p span[class='text-success']")
+
+class WebTablePageLocators:
+    #add person form
+    ADD_BUTTON = (By.CSS_SELECTOR, "button[id='addNewRecordButton']")
+    FIRST_NAME_FIELD = (By.CSS_SELECTOR, "input[id='firstName']")
+    LAST_NAME_FIELD = (By.CSS_SELECTOR, "input[id='lastName']")
+    EMAIL_FIELD = (By.CSS_SELECTOR, "input[id='userEmail']")
+    AGE_FIELD = (By.CSS_SELECTOR, "input[id='age']")
+    SALARY_FIELD = (By.CSS_SELECTOR, "input[id='salary']")
+    DEPARTMENT_FIELD = (By.CSS_SELECTOR, "input[id='department']")
+    SUBMIT_BUTTON = (By.CSS_SELECTOR, "button[id='submit']")
+
+    #tables
+    FULL_PERSONS_LIST = (By.CSS_SELECTOR, "div[class='rt-tr-group']")
+    SEARCH_FIELD = (By.CSS_SELECTOR, "input[id='searchBox']")
+    DELETE_BUTTON = (By.CSS_SELECTOR, "span[title='Delete']")
+    ROW_PARENT = (By.XPATH, ".//ancestor::div[@class='rt-tr-group']")
+
+
+
